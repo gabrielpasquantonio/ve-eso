@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <style type="text/css">
+      body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+      }
+      .divLoaderIndex.available {
+        opacity: 0;
+      }
+      .divLoaderIndex {
+        background-color: #292929;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        opacity: 1;
+        pointer-events: none;
+        -webkit-transition: opacity cubic-bezier(0.4, 0, 0.2, 1) 436ms;
+        -moz-transition: opacity cubic-bezier(0.4, 0, 0.2, 1) 436ms;
+        transition: opacity cubic-bezier(0.4, 0, 0.2, 1) 436ms;
+        z-index: 9999;
+      }
+      .divsvgLoaderIndexIndex {
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: flex;
+        -webkit-flex-direction: column;
+        -moz-flex-direction: column;
+        flex-direction: column;
+        -webkit-justify-content: center;
+        -moz-justify-content: center;
+        justify-content: center;
+        align-items: center;
+        -webkit-animation: fadein 436ms;
+        -moz-animation: fadein 436ms;
+        animation: fadein 436ms;
+        height: 98%;
+        color: #61dafb;
+      }
+      .divWelcomeIndex {
+        font-size: x-large;
+        font-weight: bold;
+      }
+      .svgLoaderIndex {
+        width: 112px;
+        height: 112px;
+        margin: 16px;
+        -webkit-align-self: center;
+        -moz-align-self: center;
+        align-self: center;
+      }
+      .divHeadLoaderIndex {
+        background-color: #c6dafc;
+        height: 4px;
+        overflow: hidden;
+        position: relative;
+      }
+      .divLoaderIndex .first-indicator,
+      .divLoaderIndex .second-indicator {
+        background-color: #056d8b;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        top: 0;
+        position: absolute;
+        -webkit-transform-origin: left center;
+        -moz-transform-origin: left center;
+        transform-origin: left center;
+        -webkit-transform: scaleX(0);
+        -moz-transform: scaleX(0);
+        transform: scaleX(0);
+      }
+      .divLoaderIndex .first-indicator {
+        -webkit-animation: first-indicator 2s linear infinite;
+        -moz-animation: first-indicator 2s linear infinite;
+        animation: first-indicator 2s linear infinite;
+      }
+      .divLoaderIndex .second-indicator {
+        -webkit-animation: second-indicator 2s linear infinite;
+        -moz-animation: second-indicator 2s linear infinite;
+        animation: second-indicator 2s linear infinite;
+      }
+      .divLoaderIndex .svgLoaderIndex {
+        animation: App-logo-spin infinite 20s linear;
+        -webkit-align-self: center;
+        -moz-align-self: center;
+        align-self: center;
+      }
+      @keyframes App-logo-spin {
+        from {
+          transform: rotate(0);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+      @-webkit-keyframes fadein {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+      @-moz-keyframes fadein {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+      @keyframes fadein {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+      @keyframes first-indicator {
+        0% {
+          transform: translate(0) scaleX(0);
+        }
+        25% {
+          transform: translate(0) scaleX(0.5);
+        }
+        50% {
+          transform: translate(25%) scaleX(0.75);
+        }
+        75% {
+          transform: translate(100%) scaleX(0);
+        }
+        100% {
+          transform: translate(100%) scaleX(0);
+        }
+      }
+      @keyframes second-indicator {
+        0% {
+          transform: translate(0) scaleX(0);
+        }
+        60% {
+          transform: translate(0) scaleX(0);
+        }
+        80% {
+          transform: translate(0) scaleX(0.6);
+        }
+        100% {
+          transform: translate(100%) scaleX(0.1);
+        }
+      }
+    </style>
+    <title>FactoryFour APIs</title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div class="divLoaderIndex" id="divLoaderIndex">
+      <div class="divHeadLoaderIndex">
+        <div class="first-indicator"></div>
+        <div class="second-indicator"></div>
+      </div>
+      <div class="divsvgLoaderIndexIndex">
+      <div class="divWelcomeIndex">Welcome to FactoryFour APIs Health Status Check  </div>
+        <svg
+          class="svgLoaderIndex"
+          width="86"
+          height="86"
+          viewBox="0 0 86 86"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M46.7744 85.9093C45.9823 85.9095 45.2122 85.6487 44.5834 85.1671C43.9545 84.6855 43.5018 84.01 43.2955 83.2452C43.0892 82.4804 43.1407 81.669 43.442 80.9364C43.7434 80.2038 44.2778 79.591 44.9625 79.1928L78.5974 59.8028V51.6649L48.5647 68.9715C48.0175 69.2965 47.3939 69.4702 46.7575 69.4749C46.1212 69.4796 45.495 69.3152 44.9431 68.9984C44.3912 68.6815 43.9334 68.2238 43.6165 67.6719C43.2996 67.12 43.1351 66.4938 43.1397 65.8574V49.408C43.1396 48.7777 43.3049 48.1583 43.619 47.6119C43.9332 47.0654 44.3852 46.6109 44.9299 46.2939L74.9192 28.933L68.3007 25.1244L36.5104 43.4836V82.3069C36.5116 82.942 36.3449 83.5661 36.0273 84.116C35.7096 84.6659 35.2522 85.122 34.7014 85.4381C34.1507 85.7543 33.5261 85.9192 32.8911 85.9162C32.2561 85.9132 31.6331 85.7424 31.0854 85.421L16.3946 76.9576C15.8518 76.6391 15.402 76.1841 15.0898 75.6377C14.7776 75.0913 14.614 74.4727 14.6152 73.8435V32.9585C14.6153 32.3268 14.7806 31.7061 15.0947 31.1579C15.4087 30.6098 15.8606 30.1532 16.4054 29.8336L46.3947 12.4727L39.7762 8.74009L7.98586 27.0992V65.8791C7.98586 66.8346 7.60635 67.7508 6.93081 68.4264C6.25527 69.102 5.33904 69.4815 4.38368 69.4815C3.42832 69.4815 2.51209 69.102 1.83655 68.4264C1.16101 67.7508 0.781494 66.8346 0.781494 65.8791V25.0159C0.783576 24.3848 0.95095 23.7651 1.26695 23.2188C1.58295 22.6724 2.03655 22.2183 2.58259 21.9018L37.9751 1.43766C38.5214 1.12349 39.1406 0.95816 39.7708 0.95816C40.401 0.95816 41.0202 1.12349 41.5665 1.43766L55.3893 9.40197C55.9368 9.71818 56.3914 10.1729 56.7075 10.7205C57.0236 11.2681 57.19 11.8892 57.19 12.5215C57.19 13.1538 57.0236 13.7749 56.7075 14.3225C56.3914 14.8701 55.9368 15.3248 55.3893 15.641L21.7544 35.031V71.7384L29.2843 76.0787V41.4437C29.2842 40.8121 29.4507 40.1916 29.7669 39.6448C30.0831 39.0981 30.5379 38.6444 31.0854 38.3296L66.478 17.898C67.0243 17.5838 67.6434 17.4185 68.2736 17.4185C68.9038 17.4185 69.523 17.5838 70.0693 17.898L83.8921 25.8623C84.4398 26.177 84.8949 26.6306 85.2113 27.1774C85.5277 27.7241 85.6943 28.3447 85.6943 28.9764C85.6943 29.6081 85.5277 30.2287 85.2113 30.7754C84.8949 31.3222 84.4398 31.7758 83.8921 32.0905L50.3658 51.4913V59.6292L80.355 42.2683C80.9028 41.947 81.5257 41.7761 82.1608 41.7731C82.7958 41.7701 83.4203 41.935 83.9711 42.2512C84.5218 42.5673 84.9792 43.0235 85.2969 43.5733C85.6146 44.1232 85.7812 44.7474 85.78 45.3824V61.9078C85.7812 62.5397 85.6152 63.1606 85.2989 63.7075C84.9826 64.2544 84.5272 64.7079 83.9789 65.0219L48.5647 85.421C48.0231 85.7427 47.4044 85.9114 46.7744 85.9093Z"
+            fill="url(#paint0_linear)"
+          />
+          <defs>
+            <linearGradient
+              id="paint0_linear"
+              x1="10.0691"
+              y1="76.6321"
+              x2="72.4815"
+              y2="14.2231"
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop stop-color="#FFE600" />
+              <stop offset="0.06" stop-color="#F8E600" />
+              <stop offset="0.14" stop-color="#E6E700" />
+              <stop offset="0.23" stop-color="#C8E900" />
+              <stop offset="0.33" stop-color="#9EEB00" />
+              <stop offset="0.45" stop-color="#69EE00" />
+              <stop offset="0.5" stop-color="#4CEF00" />
+              <stop offset="0.81" stop-color="#34A39E" />
+              <stop offset="1" stop-color="#2677F9" />
+            </linearGradient>
+          </defs>
+        </svg>
+        <div>Loading...</div>
+      </div>
+    </div>
+    <div id="root"></div>
+  </body>
+</html>

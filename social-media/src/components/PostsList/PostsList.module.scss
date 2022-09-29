@@ -1,0 +1,10 @@
+@import 'scss/_colors.scss';
+
+.PostsList {
+  .Divider {
+    border: 0;
+    height: 1px;
+    margin: 24px 16px;
+    background-color: $medium-gray;
+  }
+}

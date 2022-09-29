@@ -1,0 +1,30 @@
+@import 'scss/_colors.scss';
+
+.CustomToast {
+  min-width: 250px;
+
+  @mixin variantToast($variant, $bg-color, $color: $white) {
+    &[color='#{$variant}'] {
+      background-color: $bg-color;
+      color: $color;
+
+      [class$='toast-header'] {
+        background-color: $bg-color;
+        border-bottom-color: $gray;
+        color: $color;
+
+        [class*='close'] {
+          opacity: 1;
+          margin-bottom: 0;
+          & > span {
+            color: $color;
+          }
+        }
+      }
+    }
+  }
+
+  @include variantToast('success', $success);
+
+  @include variantToast('danger', $danger);
+}

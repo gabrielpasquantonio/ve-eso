@@ -1,0 +1,36 @@
+@import 'scss/_colors.scss';
+
+.HomePage {
+  width: 872px;
+  margin: 28px auto;
+  @media (max-width: 890px) {
+    width: 100%;
+    padding: 0 16px 0 16px;
+  }
+
+  .AddPostContainer {
+    background-color: $white;
+    padding: 16px;
+    border-radius: 8px;
+  }
+
+  .FeedHeaderContainer {
+    display: flex;
+    padding: 0 16px;
+    align-items: center;
+    margin: 12px 0 12px 0;
+    justify-content: space-between;
+
+    h3 {
+      span {
+        color: $twitter;
+      }
+    }
+  }
+
+  .PostsListContainer {
+    margin-top: 16px;
+    border-radius: 8px;
+    background-color: $white;
+  }
+}
